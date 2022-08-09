@@ -1,0 +1,12 @@
+<mat-drawer-container class="nav-container">
+    <mat-drawer-content>
+        <ul class="dog-breed" *ngFor="let dogBreed of dogBreeds | keyvalue">
+            <li class="main-breed">{{dogBreed.key}}</li>
+            <ul *ngIf="(dogBreed.value)">
+                <li class="sub-breed" *ngFor="let subBreed of dogBreed.value">
+                    {{subBreed}}
+                </li>
+            </ul>
+        </ul>
+    </mat-drawer-content>
+</mat-drawer-container>
