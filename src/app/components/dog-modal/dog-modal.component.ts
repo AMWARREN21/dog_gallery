@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ModalImage } from '../../DogImage';
 
 @Component({
   selector: 'app-dog-modal',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DogModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: ModalImage) {
+
+  }
 
   ngOnInit(): void {
   }
