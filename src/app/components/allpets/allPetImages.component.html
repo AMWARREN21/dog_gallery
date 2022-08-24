@@ -1,5 +1,5 @@
 <div class="picture-container">
     <mat-card *ngFor="let dogImage of dogImages" class="dog-image">
-        <img mat-card-xl-image src={{dogImage}} alt="picture of a dog" (click)="getImg($event)" />
+        <img mat-card-xl-image src={{dogImage}} alt="picture of a dog" (click)="openModal($event)" />
     </mat-card>
 </div>
