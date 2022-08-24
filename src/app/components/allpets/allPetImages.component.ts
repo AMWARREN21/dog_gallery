@@ -1,4 +1,6 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DogModalComponent } from '../dog-modal/dog-modal.component';
+import { MatDialog } from '@angular/material/dialog';
 import { DogsService } from '../../services/dogs.service'
 import { DogImage } from '../../DogImage';
 
@@ -13,12 +15,18 @@ export class AllPetImagesComponent implements OnInit {
   dogImages: DogImage[] = [];
   modalImage: string = ''
 
-  getImg($event: Event) {
+
+  constructor(private DogsService: DogsService, public dialog: MatDialog) { }
+
+  openModal($event: Event) {
     this.modalImage = ($event.target as HTMLImageElement).src
     console.log(this.modalImage)
+    this.dialog.open(DogModalComponent, {
+      data: {
+        image: this.modalImage
+      }
+    })
   }
-
-  constructor(private DogsService: DogsService) { }
 
   ngOnInit(): void {
     this.DogsService.getRandomImages().subscribe((dogs) => {
