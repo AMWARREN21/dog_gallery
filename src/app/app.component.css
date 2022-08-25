@@ -3,12 +3,13 @@
     max-height: calc(100vh - 64px);
 }
 
-.pet-images {
-    height: inherit;
-    overflow: scroll;
-}
-
 .sidenav {
     height: inherit;
     min-width: 13rem;
+}
+
+.main-content {
+    height: inherit;
+    overflow: scroll;
+    padding-bottom: 20px;
 }

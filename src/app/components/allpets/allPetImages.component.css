@@ -1,10 +1,19 @@
+.main-container {
+    display: flex;
+    max-height: calc(100vh - 64px);
+}
+
 .picture-container {
     display: flex;
-    margin-top: 20px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     justify-content: center;
+    overflow-y: scroll;
+    max-height: inherit;
+
 }
 
 .dog-image {
