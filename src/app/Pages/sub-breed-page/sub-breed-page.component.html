@@ -1,1 +1,7 @@
-<p>sub-breed-page works!</p>
+<div class="main-container">
+    <div class="picture-container">
+        <mat-card *ngFor="let subBreedImage of subBreedImages" class="dog-image">
+            <img mat-card-xl-image src={{subBreedImage}} alt="picture of a dog" (click)="openModal($event)" />
+        </mat-card>
+    </div>
+</div>
