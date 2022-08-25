@@ -1,9 +1,10 @@
 <mat-drawer-container class="nav-container">
     <mat-drawer-content>
         <ul class="dog-breed" *ngFor="let dogBreed of dogBreeds | keyvalue">
-            <li class="main-breed">{{dogBreed.key}}</li>
+            <li class="main-breed" (click)="getBreed($event)" routerLink="/{{dogBreed.key}}">{{dogBreed.key}}</li>
             <ul *ngIf="(dogBreed.value)">
-                <li class="sub-breed" *ngFor="let subBreed of dogBreed.value">
+                <li class="sub-breed" *ngFor="let subBreed of dogBreed.value" (click)="getSubreed($event)"
+                    routerLink="/{{dogBreed.key}}/{{subBreed}}">
                     {{subBreed}}
                 </li>
             </ul>
