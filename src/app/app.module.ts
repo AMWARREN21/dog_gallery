@@ -14,6 +14,9 @@ import { AllPetImagesComponent } from './components/allpets/allPetImages.compone
 import { HeaderComponent } from './components/header/header.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { DogModalComponent } from './components/dog-modal/dog-modal.component';
+import { HomepageComponent } from './Pages/homepage/homepage.component';
+import { BreedPageComponent } from './Pages/breed-page/breed-page.component';
+import { SubBreedPageComponent } from './Pages/sub-breed-page/sub-breed-page.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { DogModalComponent } from './components/dog-modal/dog-modal.component';
     HeaderComponent,
     SidenavComponent,
     DogModalComponent,
+    HomepageComponent,
+    BreedPageComponent,
+    SubBreedPageComponent,
   ],
   imports: [
     BrowserModule,
