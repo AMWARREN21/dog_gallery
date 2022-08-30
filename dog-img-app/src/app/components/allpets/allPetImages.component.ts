@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DogModalComponent } from '../dog-modal/dog-modal.component';
 import { MatDialog } from '@angular/material/dialog';
 import { DogsService } from '../../services/dogs.service'
-import { DogImage } from '../../DogImage';
+import { DogImage } from '../../models/DogImage';
 
 @Component({
   selector: 'app-allpets',
