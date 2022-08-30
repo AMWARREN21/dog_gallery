@@ -1,17 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DogsService } from 'src/app/services/dogs.service';
+import { DogsService } from 'dog-img-app/src/app/services/dogs.service';
 import { MatDialog } from '@angular/material/dialog';
-import { DogModalComponent } from 'src/app/components/dog-modal/dog-modal.component';
+import { DogModalComponent } from 'dog-img-app/src/app/components/dog-modal/dog-modal.component';
 
 @Component({
-  selector: 'app-sub-breed-page',
-  templateUrl: './sub-breed-page.component.html',
+  selector: 'app-breed-page',
+  templateUrl: './breed-page.component.html',
   styleUrls: ['../../components/allpets/allPetImages.component.css']
 })
-export class SubBreedPageComponent implements OnInit {
+export class BreedPageComponent implements OnInit {
 
-  subBreedImages: any = ''
+  breedImages: any = ''
   modalImage: any = ''
 
   constructor(private route: ActivatedRoute, private DogsService: DogsService, private dialog: MatDialog) { }
@@ -29,9 +29,8 @@ export class SubBreedPageComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       let breed: any = params.get('breed')
-      let subBreed = params.get('subBreed')
-      this.DogsService.getSubreedImages(breed, subBreed).subscribe((image) => {
-        this.subBreedImages = image['message']
+      this.DogsService.getBreedImages(breed).subscribe((image) => {
+        this.breedImages = image['message']
       })
     })
   }

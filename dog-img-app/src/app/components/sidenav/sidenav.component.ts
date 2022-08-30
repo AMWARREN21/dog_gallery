@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DogsService } from 'src/app/services/dogs.service';
+import { DogsService } from 'dog-img-app/src/app/services/dogs.service';
 
 @Component({
   selector: 'app-sidenav',

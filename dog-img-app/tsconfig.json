@@ -2,8 +2,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "baseUrl": "../",
+    "outDir": "../dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
@@ -13,8 +13,8 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
-    "experimentalDecorators": true,
     "moduleResolution": "node",
+    "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es2020",
     "module": "es2020",
