@@ -1,0 +1,15 @@
+.content-container {
+    display: flex;
+    max-height: calc(100vh - 64px);
+}
+
+.sidenav {
+    height: inherit;
+    min-width: 13rem;
+}
+
+.main-content {
+    height: inherit;
+    overflow: scroll;
+    padding-bottom: 20px;
+}
