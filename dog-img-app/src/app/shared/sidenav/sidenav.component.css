@@ -1,0 +1,48 @@
+.mat-drawer-inner-content {
+    overflow: hidden !important;
+}
+
+mat-drawer-content {
+    overflow: scroll
+}
+
+mat-drawer-content::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-container {
+    height: 100%;
+}
+
+.dog-breed {
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.dog-breed:last-child {
+    margin-bottom: 20px;
+}
+
+.main-breed {
+    font-size: 15px;
+    list-style: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+/* .main-breed::first-letter {
+    capit
+} */
+
+.sub-breed {
+    font-size: 13px;
+    list-style: disc;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.sub-breed:hover,
+.main-breed:hover {
+    text-decoration: underline;
+}
