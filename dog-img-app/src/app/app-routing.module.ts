@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AllPetImagesComponent } from './components/allpets/allPetImages.component';
-import { BreedPageComponent } from './pages/breed-page/breed-page.component';
+import { BreedPageComponent } from './components/breed-images/breed-page.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
-import { SubBreedPageComponent } from './pages/sub-breed-page/sub-breed-page.component';
+import { SubBreedPageComponent } from './components/sub-breed-images/sub-breed-page.component';
 
 const routes: Routes = [
   {
