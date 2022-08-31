@@ -11,23 +11,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AllPetImagesComponent } from './components/allpets/allPetImages.component';
-import { HeaderComponent } from './components/header/header.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { DogModalComponent } from './components/dog-modal/dog-modal.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { SidenavComponent } from './shared/sidenav/sidenav.component';
+import { DogModalComponent } from './shared/components/dog-modal/dog-modal.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
-import { BreedPageComponent } from './pages/breed-page/breed-page.component';
-import { SubBreedPageComponent } from './pages/sub-breed-page/sub-breed-page.component';
+import { BreedPageComponent } from './components/breed-images/breed-page.component';
+import { SubBreedPageComponent } from './components/sub-breed-images/sub-breed-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AllPetImagesComponent,
     HeaderComponent,
     SidenavComponent,
-    DogModalComponent,
     HomepageComponent,
+    AllPetImagesComponent,
     BreedPageComponent,
     SubBreedPageComponent,
+    DogModalComponent,
   ],
   imports: [
     BrowserModule,
