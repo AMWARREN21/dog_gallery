@@ -22,6 +22,7 @@ export class BreedPageComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       //get the breed name from url
       let breed: any = params.get('breed')
+      console.log(`Breed: ${breed}`)
       //call service to getBreedImages and have the dogImages instance = result
       this.DogsService.getBreedImages(breed).subscribe((image) => {
         this.dogImages.message = image['message']
