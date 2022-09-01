@@ -1,7 +1,38 @@
-# Dog Gallery
+## About The Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.<br><br> This was my first time using Angular and Typescript. Coming from React I didn't know what to expect but as I continued this project I found Angular to be more intuitive and made more sense logically.<br><br>This project is using the [Dog Ceo Api](https://dog.ceo/dog-api/) which was very easy and fun to use. I used Angular Material for the UI design, I've previously used Material UI with React so it felt right at home.<br><br> I used Angular's routing to create dynamic routes that change when you click on each dog breed and their sub breed.  
+![dog-images-project](https://user-images.githubusercontent.com/99050358/187965178-2136f157-e322-4887-aed4-5e0c7eb5be54.png)
 
-## Development server
+### Built With
+**Front-End**: Angular, TypeScript, HTML5, CSS3
+<br>
+**Testing**: Jasmine
 
-Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Getting Started
+
+1. Fork and Clone Repo
+2. Install Dependencies
+  ```sh
+  npm install
+  ```
+3. Start Development Server
+  ```sh 
+  ng serve
+  ```
+4. Testing (Optional)
+  ```sh
+  ng test
+  ```
+
+## Usage
+
+![dog](https://user-images.githubusercontent.com/99050358/187970008-fcd64eb2-b295-4aab-b6ea-9159361bed5b.gif)
+
+#### Navigation
+
+Use the Page Title in the Header to display random dog photos of any breed
+<br>
+<br>
+Use the Side Navigation Bar to display pictures of the selected Breed and or Sub-Breed
+<br>
+<br>
+Click on a dog picture to display a modal with that picutre. To close simply click the 'close' button or click outside the modal
