@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -17,12 +19,16 @@ import { DogModalComponent } from './shared/components/dog-modal/dog-modal.compo
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { BreedPageComponent } from './components/breed-images/breed-page.component';
 import { SubBreedPageComponent } from './components/sub-breed-images/sub-breed-page.component';
+import { FooterComponent } from './shared/footer/footer.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SidenavComponent,
+    FooterComponent,
     HomepageComponent,
     AllPetImagesComponent,
     BreedPageComponent,
@@ -32,6 +38,13 @@ import { SubBreedPageComponent } from './components/sub-breed-images/sub-breed-p
   imports: [
     BrowserModule,
     HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     MatCardModule,
     MatToolbarModule,
     MatSidenavModule,
@@ -44,3 +57,7 @@ import { SubBreedPageComponent } from './components/sub-breed-images/sub-breed-p
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}
