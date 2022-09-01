@@ -1,0 +1,43 @@
+footer {
+    height: 15rem;
+    width: 100vw;
+    background-color: rgb(150, 220, 210);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    padding-left: 3rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-weight: 400;
+}
+
+.lang-links {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: .9rem;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-weight: 300;
+}
+
+.lang {
+    cursor: pointer;
+}
+
+.lang:hover {
+    text-decoration: underline;
+}
+
+.links-container {
+    padding-bottom: 10px;
+}

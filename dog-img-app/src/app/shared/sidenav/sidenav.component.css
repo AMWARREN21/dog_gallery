@@ -6,10 +6,6 @@ mat-drawer-content {
     overflow: scroll
 }
 
-mat-drawer-content::-webkit-scrollbar {
-    display: none;
-}
-
 .nav-container {
     height: 100%;
 }
@@ -25,18 +21,18 @@ mat-drawer-content::-webkit-scrollbar {
 }
 
 .main-breed {
-    font-size: 15px;
+    font-size: 17px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 300;
     list-style: none;
     cursor: pointer;
     width: fit-content;
 }
 
-/* .main-breed::first-letter {
-    capit
-} */
-
 .sub-breed {
-    font-size: 13px;
+    font-size: 15px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 200;
     list-style: disc;
     cursor: pointer;
     width: fit-content;

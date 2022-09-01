@@ -11,7 +11,7 @@
     padding-top: 15px;
     padding-bottom: 15px;
     justify-content: center;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     max-height: inherit;
 
 }
