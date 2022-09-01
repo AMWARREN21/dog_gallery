@@ -1,13 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { MatCardModule } from '@angular/material/card';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatButtonModule } from '@angular/material/button';
+import { MaterialModule } from './material.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,8 +23,8 @@ import { FooterComponent } from './shared/footer/footer.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    SidenavComponent,
     FooterComponent,
+    SidenavComponent,
     HomepageComponent,
     AllPetImagesComponent,
     BreedPageComponent,
@@ -37,6 +33,7 @@ import { FooterComponent } from './shared/footer/footer.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -45,19 +42,15 @@ import { FooterComponent } from './shared/footer/footer.component';
         deps: [HttpClient]
       }
     }),
-    MatCardModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatDialogModule,
-    AppRoutingModule,
+    MaterialModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  exports: [TranslateModule],
+  providers: [HttpClient, HttpClientModule, TranslateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
