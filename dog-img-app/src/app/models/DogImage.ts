@@ -4,11 +4,20 @@ export interface DogImages {
 }
 
 export interface DogBreedList {
-    message: {},
+    message: breed,
     status: string
+}
+
+export interface breed {
+    [key: string]: subBreed
+}
+
+export interface subBreed {
+    [key: string]: any
 }
 
 export interface ModalImage {
     image: string
 }
+
 
