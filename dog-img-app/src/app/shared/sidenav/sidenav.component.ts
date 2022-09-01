@@ -19,7 +19,7 @@ export class SidenavComponent implements OnInit {
   constructor(private DogsService: DogsService) { }
 
   ngOnInit(): void {
-    this.DogsService.getAllBreeds().subscribe((dogs) => {
+    this.DogsService.getAllBreeds().subscribe((dogs: any) => {
       (this.dogBreeds.message = dogs['message'])
     })
   }
