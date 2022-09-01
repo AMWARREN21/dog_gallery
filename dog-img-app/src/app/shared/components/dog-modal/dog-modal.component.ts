@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { TranslateService } from '@ngx-translate/core';
 import { ModalImage } from '../../../models/DogImage';
 
 @Component({
@@ -9,7 +10,7 @@ import { ModalImage } from '../../../models/DogImage';
 })
 export class DogModalComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: ModalImage) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: ModalImage, public translate: TranslateService) {
 
   }
 
