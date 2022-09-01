@@ -1,15 +1,18 @@
-.content-container {
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+.main-root {
     display: flex;
-    max-height: calc(100vh - 64px);
+    flex-direction: column;
 }
 
-.sidenav {
-    height: inherit;
-    min-width: 13rem;
+router-outlet {
+    height: fit-content;
 }
 
-.main-content {
-    height: inherit;
-    overflow: scroll;
-    padding-bottom: 20px;
+app-footer {
+    margin-top: auto;
 }
