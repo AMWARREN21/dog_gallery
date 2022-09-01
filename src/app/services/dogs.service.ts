@@ -37,10 +37,13 @@ export class DogsService {
 
   //function to open modal so it can be accessed my multiple components
   openModal($event: Event) {
+    let imgData = ($event.target as HTMLImageElement).src
+    console.log(imgData)
     this.dialog.open(DogModalComponent, {
       data: {
-        image: ($event.target as HTMLImageElement).src
+        image: imgData
       }
     })
+
   }
 }
