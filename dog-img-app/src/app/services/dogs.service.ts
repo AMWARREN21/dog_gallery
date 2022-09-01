@@ -10,7 +10,7 @@ import { DogModalComponent } from '../shared/components/dog-modal/dog-modal.comp
 })
 export class DogsService {
 
-  private apiUrl = 'https://dog.ceo/api'
+  apiUrl = 'https://dog.ceo/api'
 
   constructor(private http: HttpClient, private dialog: MatDialog) { }
 
