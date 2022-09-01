@@ -10,6 +10,7 @@ import { DogImages } from '../../models/DogImage';
 })
 export class SubBreedPageComponent implements OnInit {
 
+  //instance of dog images model
   dogImages: DogImages = {
     message: [],
     status: ''
@@ -19,8 +20,10 @@ export class SubBreedPageComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
+      //get the breed name and sub-breed name from url
       let breed: any = params.get('breed')
       let subBreed = params.get('subBreed')
+      //call service to getSubreedImages and have the dogImages instance = result
       this.DogsService.getSubreedImages(breed, subBreed).subscribe((image) => {
         this.dogImages.message = image['message']
       })

@@ -11,6 +11,7 @@ export class FooterComponent implements OnInit {
 
   constructor(private translate: TranslateService) { }
 
+  //function to change langauge displayed
   changeLang($event: Event) {
     let lang: any = ($event.target as HTMLLIElement).textContent
     this.translate.use(lang)

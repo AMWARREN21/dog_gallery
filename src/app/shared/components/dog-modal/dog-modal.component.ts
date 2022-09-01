@@ -10,6 +10,7 @@ import { ModalImage } from '../../../models/DogImage';
 })
 export class DogModalComponent implements OnInit {
 
+  //taking in data that can be used in template
   constructor(@Inject(MAT_DIALOG_DATA) public data: ModalImage, public translate: TranslateService) {
 
   }

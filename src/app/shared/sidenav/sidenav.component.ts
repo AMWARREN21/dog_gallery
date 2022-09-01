@@ -9,16 +9,16 @@ import { DogBreedList } from '../../models/DogImage';
 })
 export class SidenavComponent implements OnInit {
 
+  //instance of dog breed list model
   dogBreeds: DogBreedList = {
     message: {},
     status: ''
   };
 
-  Object = Object
-
   constructor(private DogsService: DogsService) { }
 
   ngOnInit(): void {
+    //call service to getallbreeds and have the dogBreeds instance = result
     this.DogsService.getAllBreeds().subscribe((dogs: any) => {
       (this.dogBreeds.message = dogs['message'])
     })

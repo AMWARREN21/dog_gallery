@@ -10,6 +10,7 @@ import { DogImages } from '../../models/DogImage';
 
 export class AllPetImagesComponent implements OnInit {
 
+  //instance of dog images model
   dogImages: DogImages = {
     message: [],
     status: ''
@@ -18,6 +19,7 @@ export class AllPetImagesComponent implements OnInit {
   constructor(public DogsService: DogsService) { }
 
   ngOnInit(): void {
+    //call service to getRandomImages and have the dogImages instance = result
     this.DogsService.getRandomImages().subscribe((dogs) => (this.dogImages.message = dogs.message))
   }
 }
