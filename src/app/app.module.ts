@@ -16,6 +16,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { BreedPageComponent } from './components/breed-images/breed-page.component';
 import { SubBreedPageComponent } from './components/sub-breed-images/sub-breed-page.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 
 
@@ -30,6 +31,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     BreedPageComponent,
     SubBreedPageComponent,
     DogModalComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,
