@@ -1,5 +1,6 @@
 <mat-drawer-container class="nav-container">
     <mat-drawer-content>
+        <app-search-bar (filterParent)="getResults($event)"></app-search-bar>
         <ul class="dog-breed" *ngFor="let dogBreed of dogBreeds.message | keyvalue">
             <li class="main-breed" routerLink="/{{dogBreed.key}}">{{dogBreed.key | translate}}</li>
             <ul *ngIf="(dogBreed.value)">
