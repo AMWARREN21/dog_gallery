@@ -1,0 +1,12 @@
+.search-bar {
+    width: 95%;
+    height: 1.5rem;
+    margin-top: .6rem;
+    border: none;
+    border-bottom: 2px solid rgb(150, 220, 210);
+    margin-left: .2rem;
+}
+
+.search-bar:focus {
+    outline: none
+}
